@@ -18,6 +18,21 @@ namespace Inventario.BL
             CrearDatosdePrueba();
         }
 
+        public double ObtenerPrecio(int id)
+        {
+            double precio = 0;
+
+            foreach (var producto in ListadeProductos)
+            {
+                if(producto.Id == id)
+                {
+                    precio = producto.Precio;
+                }
+            }
+
+            return precio;
+        }
+
         private void CrearDatosdePrueba()
         {
             var tipo1 = new Tipo(001, " Electrica ", " Americana ");

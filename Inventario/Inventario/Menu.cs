@@ -17,6 +17,7 @@ namespace Inventario
         TiposBL _tipoBL;
         ClientesBL _clientesBL;
         DireccionesBL _direccionBL;
+        FacturaBL _facturaBL;
         public Menu()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Inventario
             _tipoBL = new TiposBL();
             _clientesBL = new ClientesBL();
             _direccionBL = new DireccionesBL();
+            _facturaBL = new FacturaBL();
         }
 
         private void PersonalizarDiseño()
@@ -82,10 +84,9 @@ namespace Inventario
 
         private void btnFacturas_Click(object sender, EventArgs e)
         {
-
-
-
-
+            var formf = new Form3();
+            formf.CargarDatos(_facturaBL, _clientesBL, _productosBL);
+            AbriHijos(formf);
             OcultarSubMenu();
         }
 
