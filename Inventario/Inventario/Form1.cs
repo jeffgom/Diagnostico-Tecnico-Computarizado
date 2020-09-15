@@ -18,13 +18,16 @@ namespace Inventario
             InitializeComponent();
 
 
-            var productosBL = new ProductosBL();
-            listadeProductosBindingSource.DataSource = productosBL.ListadeProductos;
-            var tiposBL = new TiposBL();
-            listadeTiposBindingSource.DataSource = tiposBL.ListadeTipos;
 
         }
 
+        public void CargarDatos(ProductosBL productosBL, TiposBL tiposBL)
+        {
+
+            listadeProductosBindingSource.DataSource = productosBL.ListadeProductos;
+
+            listadeTiposBindingSource.DataSource = tiposBL.ListadeTipos;
+        }
 
     }
 }

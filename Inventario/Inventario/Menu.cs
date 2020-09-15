@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Inventario.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,18 @@ namespace Inventario
 {
     public partial class Menu : Form
     {
+        ProductosBL _productosBL;
+        TiposBL _tipoBL;
+        ClientesBL _clientesBL;
+        DireccionesBL _direccionBL;
         public Menu()
         {
             InitializeComponent();
             PersonalizarDiseño();
+            _productosBL = new ProductosBL();
+            _tipoBL = new TiposBL();
+            _clientesBL = new ClientesBL();
+            _direccionBL = new DireccionesBL();
         }
 
         private void PersonalizarDiseño()
@@ -57,20 +66,17 @@ namespace Inventario
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            AbriHijos(new Form1());
-            //formProductos.MdiParent = this;
-
-            //formProductos.Show();
-
-
+            var formp = new Form1();
+            formp.CargarDatos(_productosBL, _tipoBL);
+            AbriHijos(formp);
             OcultarSubMenu();
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            AbriHijos(new Form2());
-
-
+            var formc = new Form2();
+            formc.CargarDatos(_clientesBL, _direccionBL);
+            AbriHijos(formc);
             OcultarSubMenu();
         }
 

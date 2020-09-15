@@ -1,6 +1,7 @@
 ﻿using Inventario.Modelos;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,12 @@ namespace Inventario.BL
     public class DireccionesBL
     {
 
-        public List<Direccion> ListadeDirecciones { get; set; }
+        public BindingList<Direccion> ListadeDirecciones { get; set; }
 
         public DireccionesBL()
         {
 
-            ListadeDirecciones = new List<Direccion>();
+            ListadeDirecciones = new BindingList<Direccion>();
             CrearDatosdePrueba();
 
         }

@@ -12,6 +12,11 @@ namespace Inventario.Modelos
         public string Descripcion { get; set; }
         public string Procedencia { get; set; }
 
+        public Tipo()
+        {
+
+        }
+
         public Tipo(int id, string descripcion, string procedencia)
         {
             Id = id;

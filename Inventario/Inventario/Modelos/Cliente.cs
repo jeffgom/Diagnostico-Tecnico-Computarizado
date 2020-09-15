@@ -17,6 +17,12 @@ namespace Inventario.Modelos
         public Direccion Direccion { get; set; }
         public int DireccionId { get; set; }
 
+        public Cliente()
+        {
+            Direccion = new Direccion(01, "Colonia los alamos");
+            DireccionId = Direccion.Id;
+        }
+
         public Cliente(long id, string nombre, string apellido, string celular, Direccion direccion ,DateTime fecha)
         {
             Id = id;

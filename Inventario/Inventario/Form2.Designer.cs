@@ -162,6 +162,7 @@
             // 
             // listadeClientesBindingSource
             // 
+            this.listadeClientesBindingSource.AllowNew = true;
             this.listadeClientesBindingSource.DataSource = typeof(Inventario.Modelos.Cliente);
             // 
             // bindingNavigatorCountItem
@@ -243,7 +244,6 @@
             // listadeClientesBindingNavigatorSaveItem
             // 
             this.listadeClientesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listadeClientesBindingNavigatorSaveItem.Enabled = false;
             this.listadeClientesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listadeClientesBindingNavigatorSaveItem.Image")));
             this.listadeClientesBindingNavigatorSaveItem.Name = "listadeClientesBindingNavigatorSaveItem";
             this.listadeClientesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);

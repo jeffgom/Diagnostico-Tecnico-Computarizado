@@ -15,6 +15,12 @@ namespace Inventario.Modelos
         public DateTime FechaC { get; set; }
         public Tipo Tipo { get; set; }
 
+        public Producto()
+        {
+            Tipo = new Tipo(001, " Electrica ", " Americana ");
+            TipoId = Tipo.Id;
+        }
+
         public Producto(int id, string descripcion, double precio, DateTime fechac, Tipo tipo)
         {
             Id = id;

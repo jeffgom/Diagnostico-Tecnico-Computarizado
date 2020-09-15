@@ -1,6 +1,7 @@
 ﻿using Inventario.Modelos;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,11 @@ namespace Inventario.BL
     public class TiposBL
     {
 
-        public List<Tipo> ListadeTipos { get; set; }
+        public BindingList<Tipo> ListadeTipos { get; set; }
 
         public TiposBL()
         {
-            ListadeTipos = new List<Tipo>();
+            ListadeTipos = new BindingList<Tipo>();
             CrearDatosdePrueba();
         }
 

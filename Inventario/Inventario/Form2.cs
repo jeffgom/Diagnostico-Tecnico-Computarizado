@@ -17,10 +17,15 @@ namespace Inventario
         {
             InitializeComponent();
 
-            var clientesbl = new ClientesBL();
+
+        }
+
+        public void CargarDatos(ClientesBL clientesbl, DireccionesBL direccionBL)
+        {
+
             listadeClientesBindingSource.DataSource = clientesbl.ListadeClientes;
 
-            var direccionBL = new DireccionesBL();
+
             listadeDireccionesBindingSource.DataSource = direccionBL.ListadeDirecciones;
         }
 

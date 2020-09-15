@@ -12,6 +12,10 @@ namespace Inventario.Modelos
         public int Id { get; set; }
         public string Descripcion { get; set; }
 
+        public Direccion()
+        {
+
+        }
 
         public Direccion(int id, string descripcion)
         {
